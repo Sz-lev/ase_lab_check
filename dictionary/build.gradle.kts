@@ -1,0 +1,32 @@
+plugins {
+    java
+}
+
+repositories {
+    // adds the "https://mvnrepository.com/repos/central" maven repository as dependency source
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        // Sets the used JDK version to 21
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    implementation(project(":core")) // core modulra szükség van
+
+    implementation(libs.slf4j.api)
+
+    runtimeOnly(libs.slf4j.simple)
+
+    testImplementation(libs.junit.jupiter.core)
+    testRuntimeOnly(libs.junit.jupiter.engine)
+    testRuntimeOnly(libs.junit.platform.launcher)
+}
+
+tasks.test {
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+}
