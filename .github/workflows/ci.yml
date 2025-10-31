@@ -6,7 +6,7 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - hw1
+      - main
 jobs:
   build:
     name: build
