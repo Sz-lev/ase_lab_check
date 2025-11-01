@@ -57,7 +57,7 @@ jobs:
         uses: ihiroky/extract-action@v1
         with:
           file_path: artifact/app/build/distributions/app.tar
-          extract_dir: dist
+          extract_dir: install
       - name: Test app
         run: |
           ./app/build/install/app/bin/app --password 12345678 --loglevel WARN | grep "Strength: WEAK"
