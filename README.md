@@ -5,6 +5,7 @@
 -->
 
 # 🔐 Password Strength Checker
+[![CI](https://github.com/Sz-lev/ase_lab_check/actions/workflows/ci.yml/badge.svg)](https://github.com/Sz-lev/ase_lab_check/actions/workflows/ci.yml)
 
 A simple **multi-module Gradle project** that evaluates password strength.
 
