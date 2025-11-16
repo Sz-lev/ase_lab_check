@@ -1,51 +1,42 @@
-# SPDX-FileCopyrightText: 2025 Budapest University of Technology and Economics
-#
-# SPDX-License-Identifier: Apache-2.0
-
-### Java ###
-*.class
-*.log
-*.ctxt
-hs_err_pid*
-replay_pid*
-
-### Build ###
+.gradle
 build/
-out/
 !gradle/wrapper/gradle-wrapper.jar
-
-### Gradle ###
-.gradle/
-.gradle-cache/
-!gradle/wrapper/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 ### IntelliJ IDEA ###
-.idea/
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
 *.iws
 *.iml
 *.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
 ### Eclipse ###
-.settings/
-.project
+.apt_generated
 .classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
 ### VS Code ###
 .vscode/
 
-### OS ###
+### Mac OS ###
 .DS_Store
-Thumbs.db
-desktop.ini
-
-### Temp ###
-*.tmp
-*.swp
-*.swo
-*~
-
-# Ignore Gradle project-specific cache directory
-.gradle
-
-# Ignore Gradle build output directory
-build
